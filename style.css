@@ -31,3 +31,13 @@
     font-weight: bold;
     margin-bottom: 20px;
 }
+.main-image-width{
+    width: 40vw;
+    height: 100vh;
+    margin-left: 150px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
