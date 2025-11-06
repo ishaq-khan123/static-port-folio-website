@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<nav class="relative bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+              <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+              <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex shrink-0 items-center">
+            <img src="./1.jpg.jpg" alt="Your Company" class="h-8 w-auto company-image" />
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <a href="#about" aria-current="page" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">About</a>
+              <a href="#work" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Work</a>
+              <a href="#education" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Education</a>
+              <a href="#skill" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Skills</a>
+              <a href="#connect" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Connect</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button" class="relative rounded-full p-1 text-gray-400 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">View notifications</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+              <path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+  
+          <!-- Profile dropdown -->
+          <el-dropdown class="relative ml-3">
+            <button class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+              <span class="absolute -inset-1.5"></span>
+              <span class="sr-only">Open user menu</span>
+              <img src="./1.jpg.jpg" alt="my-image-navbar" class="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
+            </button>
+  
+            <el-menu anchor="bottom end" popover class="w-48 origin-top-right rounded-md bg-white py-1 shadow-lg outline outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden">Your profile</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden">Settings</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:outline-hidden">Sign out</a>
+            </el-menu>
+          </el-dropdown>
+        </div>
+      </div>
+    </div>
+  
+    <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+        <a href="#" aria-current="page" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">About</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Education</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Skills</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Work</a>
+      </div>
+    </el-disclosure>
+  </nav>
+   <!--navbar ended  -->
+   <!-- main started -->
+        <!-- header started -->
+        <section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-col">
+    <div class="lg:w-4/6 mx-auto">
+      <div class="rounded-lg h-64 overflow-hidden">
+      <img alt="content" class="object-cover object-center h-full w-full" id="about" src="./back-logo1.jpeg">
+      </div>
+      <div class="flex flex-col sm:flex-row mt-10">
+        <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+          <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <img class="my-image-header" src="./1.jpg.jpg" alt="my-image-header">
+          </div>
+          <div class="flex flex-col items-center text-center justify-center">
+            <h2 class="font-medium title-font mt-4 text-white text-lg text-name">Muhammad Ishaq Khan</h2>
+            <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
+            <p class="text-base text-gray-400">Frontend - Backend - Generative AI and Chatbot Developer with at least 3 years of strong experience:</p>
+          </div>
+        </div>
+        <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-800 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+          <p class="leading-relaxed text-lg mb-4"><h1 class="text-2xl text-white">Hi! I'm Muhammad Ishaq Khan</h1> I am a passionate and skilled Web Developer and AI/Chatbot Developer with a strong foundation in Computer Science. I have successfully completed my Matriculation in Science and Intermediate (ICS - Computer Science), which sparked my interest in technology and innovation. Over the years, I have developed a diverse set of skills in web development, artificial intelligence, and chatbot design, working on multiple projects that demonstrate both creativity and technical proficiency. I am constantly learning, improving, and staying up-to-date with the latest trends in software development and AI technologies. Whether it's building responsive, user-friendly websites or creating intelligent chatbots, I bring dedication and problem-solving to every project I take on.</p>
+          <a class="text-indigo-400 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+        <!-- header ended -->
+          <section class="text-gray-400 body-font bg-gray-900">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap w-full mb-20">
+      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white" id="work">Temporary Selected Projects</h1>
+      </div>
+      <p class="lg:w-1/2 w-full leading-relaxed text-gray-400 text-opacity-90">I have done the projects as given below. And open to work on different responsive Web Development and Designing, Generative AI and Chatbot.</p>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="xl:w-1/4 md:w-1/2 p-4">
+        <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+          <!-- <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/720x400" alt="content"> -->
+          <h2 class="text-lg text-white font-medium title-font mb-4">SmartChat - AI</h2>
+          <p class="leading-relaxed text-base">Developed an AI chatbot that provides instant customer support for e-commerce websites. It handles FAQs, tracks orders, and provides product recommendations.The chatbot can be integrated into websites, and web applications.</p><br>
+          <div class="para"><p class="para-1">HTML</p><p class="para-1">CSS</p><p class="para-1">Node.js</p></div>
+        </div>
+      </div>
+      <div class="xl:w-1/4 md:w-1/2 p-4">
+        <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+          <!-- <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/721x401" alt="content"> -->
+          <h2 class="text-lg text-white font-medium title-font mb-4">Portfolio Website - Personal Branding Site</h2>
+          <p class="leading-relaxed text-base">Built a fully responsive personal portfolio website to showcase my projects, skills, and resume. <br>Mobile responsive, contact form, project gallery</p><br>
+          <div class="para"><p class="para-1">HTML</p><p class="para-1">CSS</p><p class="para-1">React.js</p><p class="para-1">Node.js</p></div>
+        </div>
+      </div>
+      <div class="xl:w-1/4 md:w-1/2 p-4">
+        <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+          <!-- <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/722x402" alt="content"> -->
+          <h2 class="text-lg text-white font-medium title-font mb-4">E-Commerce Web Application</h2>
+          <p class="leading-relaxed text-base">Developed a dynamic e-commerce site with shopping cart, user login, product search, and order management features. Responsive design.</p><br>
+          <div class="para"><p class="para-1">HTML</p><p class="para-1">Bootstrap</p><p class="para-1">PHP</p><p class="para-1">Node.js</p></div>
+        </div>
+      </div>
+      <div class="xl:w-1/4 md:w-1/2 p-4">
+        <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+          <!-- <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/723x403" alt="content"> -->
+          <h2 class="text-lg text-white font-medium title-font mb-4">JobGenie - Resume & Interview Prep Chatbot</h2>
+          <p class="leading-relaxed text-base">A chatbot that helps users build better resumes,prepare for job interviews by generating sample answers and feedback.The goal is to help users improve their confidence and readiness for real-world interviews.</p><br>
+          <div class="para"><p class="para-1">HTML</p><p class="para-1">CSS</p><p class="para-1">Socket.io</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="text-gray-400 bg-gray-900 body-font">
+  <div class="lg:w-1/2 w-full mb-6 lg:mb-0" id="education">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white ml-18" id="work">Education</h1>
+      </div>
+  <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 lg:w-1/2 md:w-full">
+        <div class="flex border-2 rounded-lg border-gray-800 p-8 sm:flex-row flex-col">
+          <div class="flex-grow">
+            <h2 class="text-white text-lg title-font font-medium mb-3">Matriculation</h2>
+            <p class="leading-relaxed text-base">I have done my Matriculation in Science, From Iqra city residential high school Quetta, Balochistan, Pakistan </p>
+            <a class="mt-3 text-indigo-400 inline-flex items-center">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 lg:w-1/2 md:w-full">
+        <div class="flex border-2 rounded-lg border-gray-800 p-8 sm:flex-row flex-col">
+          <div class="flex-grow">
+            <h2 class="text-white text-lg title-font font-medium mb-3">Intermediate</h2>
+            <p class="leading-relaxed text-base">I have also done my Intermediate in ICS (Intermediate in Computer Science), From Tameer-I-Nau Public college Quetta, Balochistan, Pakistan</p>
+            <a class="mt-3 text-indigo-400 inline-flex items-center">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="text-gray-400 body-font bg-gray-900">
+  <div class="container px-5 py-24 mx-auto" id="skill">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white ml-6 mb-20">Skills</h1>
+    <div class="flex flex-wrap -m-4">
+      <div class="xl:w-1/3 md:w-1/2 p-4">
+        <div class="border border-gray-700 border-opacity-75 p-6 rounded-lg">
+          <h2 class="text-lg text-white font-medium title-font mb-2 skill-heading">HTML</h2>
+          <p class="leading-relaxed text-base">Having a strong command on Hyper text markup language for the structure of website.</p>
+        </div>
+      </div>
+      <div class="xl:w-1/3 md:w-1/2 p-4">
+        <div class="border border-gray-700 border-opacity-75 p-6 rounded-lg">
+          <h2 class="text-lg text-white font-medium title-font mb-2 skill-heading">CSS</h2>
+          <p class="leading-relaxed text-base">Trying the best way for Cascading style sheet to design the structure of website.</p>
+        </div>
+      </div>
+      <div class="xl:w-1/3 md:w-1/2 p-4">
+        <div class="border border-gray-700 border-opacity-75 p-6 rounded-lg">
+          <h2 class="text-lg text-white font-medium title-font mb-2 skill-heading">JavaScript</h2>
+          <p class="leading-relaxed text-base">I have strong command over JavaScript, the core language of the web.</p>
+        </div>
+      </div>
+      <div class="xl:w-1/3 md:w-1/2 p-4">
+        <div class="border border-gray-700 border-opacity-75 p-6 rounded-lg">
+          <h2 class="text-lg text-white font-medium title-font mb-2 skill-heading">Node.js</h2>
+          <p class="leading-relaxed text-base">As a backend developer, I use Node.js to build fast and scalable server-side applications.</p>
+        </div>
+      </div>
+      <div class="xl:w-1/3 md:w-1/2 p-4">
+        <div class="border border-gray-700 border-opacity-75 p-6 rounded-lg">
+          <h2 class="text-lg text-white font-medium title-font mb-2 skill-heading">PHP</h2>
+          <p class="leading-relaxed text-base">I have worked with PHP in several web projects, especially for server-side scripting and database.</p>
+        </div>
+      </div>
+      <div class="xl:w-1/3 md:w-1/2 p-4">
+        <div class="border border-gray-700 border-opacity-75 p-6 rounded-lg">
+          <h2 class="text-lg text-white font-medium title-font mb-2 skill-heading">React.js</h2>
+          <p class="leading-relaxed text-base">With strong experience in React.js, I develop modern, single-page applications that are fast.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- main ended -->
+<!-- contacts Started -->
+<form action="https://formspree.io/f/ishaq-webdev.beta" method="POST">
+<section class="text-gray-400 bg-gray-900 body-font relative">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white" id="connect">Email Me</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base"><span class="text-white text-2xl">Hi!</span> I'm open to work. If you are intrested to work, please email me to solve your problem.</p>
+    </div>
+    <div class="lg:w-1/2 md:w-2/3 mx-auto">
+      <div class="flex flex-wrap -m-2">
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="name" class="leading-7 text-sm text-gray-400">Name</label>
+            <input type="text" id="name" name="name" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="Your name here">
+          </div>
+        </div>
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+            <input type="email" id="email" name="email" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="My email">
+          </div>
+        </div>
+        <div class="p-2 w-full">
+          <div class="relative">
+            <label for="message" class="leading-7 text-sm text-gray-400">Message</label>
+            <textarea id="message" name="message" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" placeholder="Write message to solve Your problem..."></textarea>
+          </div>
+        </div>
+        <div class="p-2 w-full">
+          <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"><a href="">+ Connect</a></button>
+        </div>
+        <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
+          <a class="text-indigo-400">searchtoread313@gmail.com</a>
+          <p class="leading-normal my-5">Email me.
+            <br>To get started.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</form>
+<!-- contacts ended -->
+<!-- footer started -->
+<footer class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">Web development AI/Chatbot</span>
+      </a>
+      <p class="mt-2 text-sm text-gray-500">Make best and responsive websites with AI/Chatbot</p>
+    </div>
+    <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">About Me</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-400 hover:text-white">Frontend Developer</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Backend Developer</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">AI/Chatbot Developer</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Graphics Designer</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Projects</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-400 hover:text-white">Portfolio Website</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Live messaging chatbot</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Interview prep chatbot</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">E-Commerse web Applications</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Skills</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-400 hover:text-white">HTML, CSS</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">JavaScript, Node.js, React.js</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">PHP</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Excel:Data Entry</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Education</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-400 hover:text-white">Matriculation</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Intermediate( ICS )</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Software Engineering (soon will be started) </a>
+          </li>
+          <!-- <li>
+            <a class="text-gray-400 hover:text-white">Fourth Link</a>
+          </li> -->
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gray-800 bg-opacity-75">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-400 text-sm text-center sm:text-left">© 2025 AI and Chatbot —
+        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-500 ml-1" target="_blank">@AI and Chatbot</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a class="text-gray-400">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>
+<!-- footer ended -->
+
+</body>
+</html>
