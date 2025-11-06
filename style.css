@@ -1,0 +1,33 @@
+.para{
+    border-radius: 0px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    border: none;
+    gap: 30px;
+}
+.para-1{
+    border: 1px solid #524747;
+    border-radius: 15px;
+    text-align: center;
+    width: 130%;
+    font-weight: bold;
+    padding: 1px;
+}
+.company-image{
+    border-radius: 20px;
+}
+.my-image-header{
+    border-radius: 50px;
+    width: 2000%;
+    height: 100%;
+}
+.skill-heading{
+    border: 1px solid #302f2f;
+    border-radius: 15px;
+    text-align: center;
+    width: 30%;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
